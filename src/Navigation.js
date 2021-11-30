@@ -1,9 +1,12 @@
 import React from "react";
-import "./MyStats.css";
+import "./Navigation.css";
 import { Link } from "react-router-dom";
 function Navigation() {
   return (
-    <nav>
+    <nav className="nav-bar">
+      <div className="logo-container">
+        <h1>ExcerciseLog</h1>
+      </div>
       <ul>
         <li>
           <Link to="/mystats">My Stats</Link>

@@ -1,0 +1,34 @@
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8vw;
+
+  background-color: #30302f;
+}
+
+.logo-container {
+  background-color: #30302f;
+}
+
+.logo-container h1 {
+  background: linear-gradient();
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style-type: none;
+}
+.nav-bar ul li {
+  padding: 0.2rem 0.1rem 0.2rem 0.1rem;
+  margin: 0.5rem;
+  background-color: #7d2525;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
