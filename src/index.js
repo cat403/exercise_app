@@ -11,8 +11,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Navigation></Navigation>
+
       <Routes>
-        <Route path="/mystats" elelement={<MyStats />} />
+        <Route path="/mystats" element={<MyStats />} />
         <Route path="/" element={<App />} />
       </Routes>
       <Footer></Footer>
