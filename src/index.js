@@ -3,12 +3,16 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import Footer from "./Footer";
+import Navigation from "./Navigation";
+import MyStats from "./MyStats";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+      <Navigation></Navigation>
       <Routes>
+        <Route path="/mystats" elelement={<MyStats />} />
         <Route path="/" element={<App />} />
       </Routes>
       <Footer></Footer>

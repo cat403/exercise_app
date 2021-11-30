@@ -1,6 +1,7 @@
 .footer {
   background-color: #30302f;
   color: #918a8a;
+  border-top: 2px solid #918a8a;
 
   display: flex;
   justify-content: center;
@@ -9,4 +10,7 @@
   bottom: 0;
   height: 3rem;
   width: 100vw;
+}
+.footer p {
+  background-color: #30302f;
 }
