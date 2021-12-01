@@ -5,7 +5,9 @@ function Navigation() {
   return (
     <nav className="nav-bar">
       <div className="logo-container">
-        <h1>ExcerciseLog</h1>
+        <Link to="/">
+          <h1>ExcerciseLog</h1>{" "}
+        </Link>
       </div>
       <ul>
         <li>
