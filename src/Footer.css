@@ -1,6 +1,6 @@
 .footer {
-  background-color: #30302f;
-  color: #918a8a;
+  background-color: var(--english-violet);
+  color: var(--light-slate-grey);
   border-top: 2px solid #918a8a;
 
   display: flex;
@@ -12,5 +12,5 @@
   width: 100vw;
 }
 .footer p {
-  background-color: #30302f;
+  background-color: var(--english-violet);
 }

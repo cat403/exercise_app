@@ -5,15 +5,22 @@
   align-items: center;
   padding: 0.8vw;
 
-  background-color: #30302f;
+  background-color: var(--english-violet);
 }
 
 .logo-container {
-  background-color: #30302f;
+  background-color: var(--english-violet);
 }
-
 .logo-container h1 {
-  background: linear-gradient();
+  background: linear-gradient(
+    0.25turn,
+    var(--light-slate-grey),
+    var(--maize-crayola),
+    50%,
+    var(--tart-orange) 80%
+  );
+  background-clip: text;
+  color: transparent;
 }
 
 .nav-bar ul {
@@ -21,10 +28,30 @@
   list-style-type: none;
 }
 .nav-bar ul li {
+  position: relative;
   padding: 0.2rem 0.1rem 0.2rem 0.1rem;
   margin: 0.5rem;
-  background-color: #7d2525;
+  color: var(--tart-orange);
+
+  font-weight: 900;
 }
+
+.nav-bar ul li ::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  width: 5%;
+  height: 2px;
+  background-color: transparent;
+  transition: all 0.5s ease-in;
+}
+.nav-bar ul li:hover ::before {
+  background-color: var(--tart-orange);
+  transform: scaleX(18);
+  left: 47%;
+}
+
 a,
 a:hover,
 a:focus,
