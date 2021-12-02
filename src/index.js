@@ -8,21 +8,30 @@ import MyStats from "./MyStats";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+import { createStore, applyMiddleware, compose } from "redux";
+import rootReducer from "./reducers/rootReducer";
+import { Provider } from "react-redux";
+import thunk from "redux-thunk";
+// store
+//action -> what you want to do
+//reducer -> changes store
+//dispatch -> send action
+const store = createStore(rootReducer, compose(applyMiddleware(thunk)));
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
-      <Navigation></Navigation>
-
-      <Routes>
-        <Route path="/mystats" exact element={<MyStats />} />
-        <Route path="/" element={<App />} />
-        <Route path="/login" exact element={<Login />} />
-        <Route path="/signup" exact element={<SignUp />} />
-      </Routes>
-      <Footer></Footer>
-    </Router>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <Router>
+        <Navigation></Navigation>
+        <Routes>
+          <Route path="/mystats" exact element={<MyStats />} />
+          <Route path="/" element={<App />} />
+          <Route path="/login" exact element={<Login />} />
+          <Route path="/signup" exact element={<SignUp />} />
+        </Routes>
+        <Footer></Footer>
+      </Router>
+    </React.StrictMode>
+  </Provider>,
   document.getElementById("root")
 );
 

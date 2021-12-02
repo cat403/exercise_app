@@ -2,15 +2,15 @@ import React from "react";
 import "./Navigation.css";
 import { Link } from "react-router-dom";
 function Navigation() {
-  const user = null;
+  const isLoggedIn = false;
   return (
     <nav className="nav-bar">
       <div className="logo-container">
         <Link to="/">
-          <h1>ExcerciseLog</h1>{" "}
+          <h1>ExcerciseLog</h1>
         </Link>
       </div>
-      {user ? (
+      {isLoggedIn ? (
         <ul>
           <li>
             <Link to="/mystats">My Stats</Link>

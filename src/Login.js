@@ -1,10 +1,17 @@
 import React from "react";
 import InputForm from "./InputForm";
+
 function Login() {
-  const handleSubmit = () => {
-    return "hi";
+  const initialState = { userName: "", password: "" };
+  const [formData, setFormData] = React.useState(initialState);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("hi");
   };
-  const handleChange = () => {};
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
+
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
@@ -21,7 +28,7 @@ function Login() {
           handleChange={handleChange}
           type="password"
         />
-        <button className="submitBtn" type="submit">
+        <button className="submitBtn" type="submit" onClick={handleSubmit}>
           Submit
         </button>
       </form>
