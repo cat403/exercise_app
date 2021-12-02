@@ -1,5 +1,5 @@
 import React from "react";
-
+import InputForm from "./InputForm";
 function Login() {
   const handleSubmit = () => {
     return "hi";
@@ -9,21 +9,18 @@ function Login() {
     <div className="form-container">
       <form onSubmit={handleSubmit}>
         <h1>Login</h1>
-        <h2>User Name</h2>
-        <input
+        <InputForm
           name="userName"
           label="User Name"
-          onChange={handleChange}
+          handleChange={handleChange}
           type="text"
-          autoFocus
-        ></input>
-        <h2>Password</h2>
-        <input
+        />
+        <InputForm
           name="password"
           label="Password"
-          onChange={handleChange}
+          handleChange={handleChange}
           type="password"
-        ></input>
+        />
         <button className="submitBtn" type="submit">
           Submit
         </button>

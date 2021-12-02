@@ -20,7 +20,7 @@ function SignUp() {
   };
   return (
     <div className="form-container">
-      <h1>Hello</h1>
+      <h1>Sign Up</h1>
       <form>
         <InputForm
           name="firstName"
@@ -58,7 +58,11 @@ function SignUp() {
           handleChange={handleChange}
           type="password"
           alert={
-            formData.password !== formData.confirmPassword ? "true" : "false"
+            formData.confirmPassword.length > 0
+              ? formData.password !== formData.confirmPassword
+                ? "true"
+                : "false"
+              : null
           }
         />
         <button type="submit" onClick={handleSubmit}>
