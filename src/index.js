@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Navigation from "./Navigation";
 import MyStats from "./MyStats";
 import Login from "./Login";
+import SignUp from "./SignUp";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 ReactDOM.render(
@@ -14,9 +15,10 @@ ReactDOM.render(
       <Navigation></Navigation>
 
       <Routes>
-        <Route path="/mystats" element={<MyStats />} />
+        <Route path="/mystats" exact element={<MyStats />} />
         <Route path="/" element={<App />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" exact element={<Login />} />
+        <Route path="/signup" exact element={<SignUp />} />
       </Routes>
       <Footer></Footer>
     </Router>
