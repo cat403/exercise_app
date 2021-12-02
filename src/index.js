@@ -5,6 +5,7 @@ import App from "./App";
 import Footer from "./Footer";
 import Navigation from "./Navigation";
 import MyStats from "./MyStats";
+import Login from "./Login";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 ReactDOM.render(
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/mystats" element={<MyStats />} />
         <Route path="/" element={<App />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer></Footer>
     </Router>
