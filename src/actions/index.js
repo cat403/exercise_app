@@ -5,3 +5,6 @@ export const trying = () => async (dispatch) => {
 export const login = (payload) => async (dispatch) => {
   dispatch({ type: "LOGIN", payload: payload });
 };
+export const logout = () => async (dispatch) => {
+  dispatch({ type: "LOGOUT" });
+};

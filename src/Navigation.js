@@ -1,8 +1,14 @@
 import React from "react";
 import "./Navigation.css";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "./actions";
 function Navigation() {
-  const isLoggedIn = false;
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch(logout());
+  };
+  const isLoggedIn = useSelector((state) => state.user.loggedIn);
   return (
     <nav className="nav-bar">
       <div className="logo-container">
@@ -19,7 +25,9 @@ function Navigation() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/logout">Logout</Link>
+            <Link to="/" onClick={handleLogout}>
+              Logout
+            </Link>
           </li>
         </ul>
       ) : (

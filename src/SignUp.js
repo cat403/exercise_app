@@ -65,7 +65,13 @@ function SignUp() {
               : null
           }
         />
-        <button type="submit" onClick={handleSubmit}>
+        <button
+          type="submit"
+          onClick={handleSubmit}
+          disabled={
+            formData.password !== formData.confirmPassword ? true : false
+          }
+        >
           Submit
         </button>
       </form>
