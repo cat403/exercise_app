@@ -1,6 +1,7 @@
 import React from "react";
 import InputForm from "./InputForm";
-
+import { useDispatch } from "react-redux";
+import { signup } from "./actions";
 function SignUp() {
   const initialState = {
     firstName: "",
@@ -14,9 +15,11 @@ function SignUp() {
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
+  const dispatch = useDispatch();
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
+    dispatch(signup);
   };
   return (
     <div className="form-container">

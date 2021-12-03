@@ -8,3 +8,6 @@ export const login = (payload) => async (dispatch) => {
 export const logout = () => async (dispatch) => {
   dispatch({ type: "LOGOUT" });
 };
+export const signup = (payload) => async (dispatch) => {
+  dispatch({ type: "SIGNUP", payload });
+};
