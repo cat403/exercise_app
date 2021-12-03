@@ -12,22 +12,26 @@ function App() {
   const loggedInStatus = useSelector((state) => {
     return state.user.loggedIn;
   });
-  console.log(useSelector((state) => state.user.name));
   const user = useSelector((state) => {
     return state.user.name;
   });
-  console.log("user", user);
+  console.log(useSelector((state) => state.user.name));
+  // const user = useSelector((state) => {
+  //   return state.user.name;
+  // });
+  console.log("loggedInStatus", loggedInStatus);
   // const tryDispatch = () => {
   // useDispatch(trying);
   // };
   // React.useEffect(() => {
-  //   dispatch(trying());
-  // }, [dispatch]);
+  //   user = useSelector((state) => {
+  //     return state.user.name;
+  //   });
+  // }, []);
   return (
     <div className="app">
       <h1>Hello</h1>
-      <h2>Logged In</h2>
-      <p>{loggedInStatus}</p>
+      {loggedInStatus ? <h3>LOGGED IN</h3> : null}
       <h2>Name</h2>
       <p>{user}</p>
       <button

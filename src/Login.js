@@ -1,12 +1,14 @@
 import React from "react";
 import InputForm from "./InputForm";
-
+import { login } from "./actions";
+import { useDispatch } from "react-redux";
 function Login() {
   const initialState = { userName: "", password: "" };
   const [formData, setFormData] = React.useState(initialState);
+  const dispatch = useDispatch();
   const handleSubmit = (event) => {
+    dispatch(login(formData.userName));
     event.preventDefault();
-    console.log("hi");
   };
   const handleChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
