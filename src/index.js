@@ -7,6 +7,7 @@ import Navigation from "./Navigation";
 import MyStats from "./MyStats";
 import Login from "./Login";
 import SignUp from "./SignUp";
+import HeroImage from "./HeroImage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { createStore, applyMiddleware, compose } from "redux";
 import rootReducer from "./reducers/rootReducer";
@@ -21,6 +22,7 @@ ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
       <Router>
+        <HeroImage></HeroImage>
         <Navigation></Navigation>
         <Routes>
           <Route path="/mystats" exact element={<MyStats />} />

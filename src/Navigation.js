@@ -10,6 +10,8 @@ function Navigation() {
   };
   const isLoggedIn = useSelector((state) => state.user.loggedIn);
   return (
+    // <div className="top-bar">
+    //   <div className="hero-image-container"></div>
     <nav className="nav-bar">
       <div className="logo-container">
         <Link to="/">
