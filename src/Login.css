@@ -1,0 +1,30 @@
+.form-container {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-slate-grey);
+}
+.form-container form {
+  background-color: var(--navajo-white);
+  height: 70vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 1em 0.5em rgba(0, 0, 0, 0.5);
+}
+.form-container h1 {
+  padding: 0.5em;
+}
+.form-container button {
+  background: var(--tart-orange);
+  color: inherit;
+  border: none;
+  margin: 0.25rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: 43vw;
+  font-size: 1rem;
+}

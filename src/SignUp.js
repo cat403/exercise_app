@@ -23,8 +23,8 @@ function SignUp() {
   };
   return (
     <div className="form-container">
-      <h1>Sign Up</h1>
       <form>
+        <h1>Sign Up</h1>
         <InputForm
           name="firstName"
           label="First Name"

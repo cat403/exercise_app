@@ -4,3 +4,19 @@
 .red {
   border-bottom: 3px solid red;
 }
+.input-form-component {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.input-form-component h3 {
+  margin: 0.25rem;
+}
+.input-form-component input {
+  margin: 0.25rem;
+  width: 40vw;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
