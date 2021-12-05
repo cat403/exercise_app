@@ -1,5 +1,6 @@
 .form-container {
-  height: 90vh;
+  padding: 2rem;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,7 +8,7 @@
 }
 .form-container form {
   background-color: var(--navajo-white);
-  height: 70vh;
+  min-height: 70vh;
   width: 60vw;
   display: flex;
   flex-direction: column;
@@ -22,9 +23,12 @@
   background: var(--tart-orange);
   color: inherit;
   border: none;
-  margin: 0.25rem;
+  margin: 0.5rem 0.25rem 2rem 0.25rem;
   padding: 0.5rem;
   border-radius: 10px;
   width: 43vw;
   font-size: 1rem;
+}
+.form-container button :hover {
+  background-color: var(--highlight);
 }
